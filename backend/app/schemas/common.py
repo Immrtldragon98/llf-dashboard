@@ -9,6 +9,11 @@ class LoginIn(BaseModel):
     username: str
     password: str
 
+class UserCreateIn(BaseModel):
+    username: str = Field(min_length=3, max_length=80)
+    password: str = Field(min_length=8, max_length=128)
+    role: Role
+
 class ReadingIn(BaseModel):
     parameter_id: int
     value: str
@@ -34,6 +39,17 @@ class ParameterCreateIn(BaseModel):
 class EquipmentParameterCreateIn(BaseModel):
     equipment_id: int
     parameter_id: int
+    display_order: int = 0
+    required: bool = True
+    options: Optional[list[str]] = None
+    min_value: Optional[float] = None
+    max_value: Optional[float] = None
+
+class EquipmentParameterCreateFullIn(BaseModel):
+    parameter_key: str
+    parameter_name: str
+    parameter_type: ParameterType
+    unit: Optional[str] = None
     display_order: int = 0
     required: bool = True
     options: Optional[list[str]] = None
