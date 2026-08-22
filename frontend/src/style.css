@@ -7,6 +7,7 @@ button:disabled{cursor:not-allowed;opacity:.45}
 header{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
 h1{margin:0 0 4px;font-size:28px}
 h2{margin:0 0 14px;font-size:18px}
+h3{margin:24px 0 12px;font-size:15px}
 small{color:#697586}
 header>button,nav button,.chip,.filters button{border:1px solid #d6dde4;background:#fff;padding:10px 14px;border-radius:8px}
 nav{display:flex;gap:8px;margin-bottom:16px}
@@ -16,7 +17,7 @@ nav .active,.chip.selected,.primary{background:#18212b;color:#fff;border-color:#
 .top-gap{margin-top:14px}
 .row,.section-title{display:flex;justify-content:space-between;align-items:center;gap:16px}
 .entry-controls{display:flex;gap:12px;align-items:center}
-.row input,.section-title input,.entry-controls input,.params input,.params select,.filters input,.filters select,.form-grid input,.form-grid select{padding:10px;border:1px solid #cfd6de;border-radius:7px;background:white}
+.row input,.section-title input,.entry-controls input,.params input,.params select,.filters input,.filters select,.form-grid input,.form-grid select,.admin-select-label select{padding:10px;border:1px solid #cfd6de;border-radius:7px;background:white}
 .equipment-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
 .equipment-tile{text-align:left;background:#fff;border:1px solid #d6dde4;border-radius:10px;padding:14px}
 .equipment-tile span,.equipment-tile small,.equipment-tile strong{display:block}
@@ -53,6 +54,7 @@ th,td{text-align:left;padding:11px;border-bottom:1px solid #edf0f2}
 th{background:#f8fafb;position:sticky;top:0}
 .abnormal-row{background:#fff4f0}
 .empty{text-align:center;color:#697586;padding:24px}
+.empty.compact{padding:14px}
 .completion-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:18px}
 .completion-card{border:1px solid #e1e6eb;border-radius:10px;padding:14px;display:flex;justify-content:space-between;gap:12px;align-items:center}
 .completion-card small{display:block;margin-top:3px}
@@ -61,6 +63,17 @@ th{background:#f8fafb;position:sticky;top:0}
 .done{background:#e9f7ef}
 .pending{background:#f2f4f6;color:#7a8490}
 .form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.admin-select-label{display:grid;gap:7px;margin-top:16px;font-size:13px;color:#55606d}
+.admin-param-list{margin-top:16px;border:1px solid #e1e6eb;border-radius:10px;overflow:hidden}
+.admin-param-row{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;padding:11px 13px;border-bottom:1px solid #edf0f2;align-items:center}
+.admin-param-row:last-child{border-bottom:0}
+.admin-param-row span{font-size:13px;color:#697586}
+.check-label{display:flex;align-items:center;gap:8px;border:1px solid #e1e6eb;border-radius:8px;padding:10px;color:#55606d}
+.check-label input{width:auto}
+.user-list{margin-top:18px;border:1px solid #e1e6eb;border-radius:10px;overflow:hidden}
+.user-row{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;padding:11px 13px;border-bottom:1px solid #edf0f2;align-items:center}
+.user-row:last-child{border-bottom:0}
+.role-pill{display:inline-block;width:max-content;background:#f2f4f6;border-radius:999px;padding:5px 9px;text-transform:capitalize;font-size:12px;font-weight:700}
 .login{min-height:100vh;display:grid;place-items:center;padding:20px}
 .login-card{width:min(390px,100%);background:#fff;padding:30px;border-radius:14px;box-shadow:0 2px 12px #00000012}
 .login-card input{display:block;width:100%;padding:11px;border:1px solid #cfd6de;border-radius:7px;margin:10px 0}
@@ -68,4 +81,4 @@ th{background:#f8fafb;position:sticky;top:0}
 .login-card small{display:block;margin-top:14px}
 @media(max-width:1000px){.equipment-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:850px){.filters{grid-template-columns:1fr 1fr}.completion-grid{grid-template-columns:1fr}}
-@media(max-width:650px){.app{padding:12px}header,.row,.section-title,.completion-card,.entry-controls{align-items:flex-start;flex-direction:column}.params label,.form-grid,.filters,.equipment-grid{grid-template-columns:1fr}nav{overflow:auto}}
+@media(max-width:650px){.app{padding:12px}header,.row,.section-title,.completion-card,.entry-controls{align-items:flex-start;flex-direction:column}.params label,.form-grid,.filters,.equipment-grid,.admin-param-row,.user-row{grid-template-columns:1fr}nav{overflow:auto}}
